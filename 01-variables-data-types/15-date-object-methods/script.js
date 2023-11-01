@@ -44,7 +44,7 @@ x = d.toLocaleString('default', {
   hour: 'numeric',
   minute: 'numeric',
   second: 'numeric',
-  timeZone: 'America/New_York',
+  timeZone: 'Africa/Dakar',
 });
 
 console.log(x);
