@@ -55,11 +55,11 @@ const positiveSum = numbers
   .filter(number => number > 0)
   .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
-  console.log(positiveSum)
+  console.log(positiveSum);
 
   // Challenge 3
   const words = ['coder', 'programmer', 'developer'];
 
-  const capitalizedWords = words.map(item => item.charAt(0).toUpperCase() + item.substring(1));
+  const capitalizedWords = words.map(item => item[0].toUpperCase() + item.substring(1));
 
-  console.log(capitalizedWords)
+  console.log(capitalizedWords);
