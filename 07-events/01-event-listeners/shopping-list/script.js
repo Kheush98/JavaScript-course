@@ -1,4 +1,4 @@
-// const clearBtn = document.querySelector('#clear');
+const clearBtn = document.querySelector('#clear');
 
 // function onClear() {
 //   const itemList = document.querySelector('ul');
@@ -33,3 +33,16 @@
 
 // // Fire off event from JS
 // setTimeout(() => clearBtn.click(), 5000);
+
+
+function deleteItem() {
+  const items = document.querySelectorAll('li');
+  const ul = document.querySelector('ul')
+//  items.forEach(item => item.remove())
+
+  while(ul.firstChild) {
+    ul.removeChild(ul.firstChild)
+  }
+}
+
+clearBtn.addEventListener('click', deleteItem);
