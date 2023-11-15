@@ -3,13 +3,12 @@ function getData(endpoint) {
     const xhr = new XMLHttpRequest();
 
     xhr.open('GET', endpoint);
-
     xhr.onreadystatechange = function () {
       if (this.readyState === 4) {
         if (this.status === 200) {
           resolve(JSON.parse(this.responseText));
         } else {
-          reject('Something went wrong');
+          reject('Something went wrong')
         }
       }
     };
@@ -20,17 +19,16 @@ function getData(endpoint) {
   });
 }
 
-// Whatever we return from a .then() is passed into the next .then() callback function args
 getData('./movies.json')
-  .then((movies) => {
+  .then(movies => {
     console.log(movies);
     return getData('./actors.json');
   })
-  .then((actors) => {
-    console.log(actors);
+  .then(actors => {
+    console.log(actors)
     return getData('./directors.json');
   })
-  .then((directors) => {
+  .then(directors => {
     console.log(directors);
   })
-  .catch((error) => console.log(error));
+  .catch(error => console.log(error));
