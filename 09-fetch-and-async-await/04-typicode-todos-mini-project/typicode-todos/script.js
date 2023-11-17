@@ -36,7 +36,7 @@ function displayTodos(todo) {
     div.textContent = todo.title;
     div.setAttribute('data-id', todo.id);
     div.classList.add('todo');
-  
+    console.log(div.dataset)
     if (todo.completed === true) {
       div.classList.add('done');
     }
@@ -47,7 +47,7 @@ function displayTodos(todo) {
 function updateTodo(e) {
   if (e.target.classList.contains('todo')) {
     e.target.classList.toggle('done');
-    const id = e.target.dataset.id;
+    const {id} = e.target.dataset;
 
     if (e.target.classList.contains('done')) {
 
@@ -81,7 +81,7 @@ function updateTodo(e) {
 
 function deleteTodo(e) {
   if (e.target.classList.contains('todo')) {
-    const id = e.target.dataset.id;
+    const {id} = e.target.dataset;
     
     fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
       method: 'DELETE',
