@@ -6,7 +6,7 @@ class Wallet {
 
   deposit(amount) {
     this._balance += amount;
-    this._transactions.push(`${new Date()}: Depot de ${amount} $`)
+    this._transactions.push(`${new Date()}: Depot de ${amount} $`);
   }
 
   withdraw(amount) {
@@ -15,7 +15,7 @@ class Wallet {
       return;
     }
     this._balance -= amount;
-    this._transactions.push(`${new Date()}: Retrait de ${amount} $`)
+    this._transactions.push(`${new Date()}: Retrait de ${amount} $`);
   }
 
   get balance() {
