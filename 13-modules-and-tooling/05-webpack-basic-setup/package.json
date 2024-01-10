@@ -1,0 +1,15 @@
+{
+  "name": "05-webpack-basic-setup",
+  "version": "1.0.0",
+  "description": "Basics webpack ",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Cheikh Gaye",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
