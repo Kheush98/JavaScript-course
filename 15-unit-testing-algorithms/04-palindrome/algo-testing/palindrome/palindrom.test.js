@@ -19,5 +19,5 @@ describe('Palindrome', () => {
   });
   it('should return false if has spaces', () => {
     expect(palindrome('  wow')).toBeFalsy();
-  })
+  });
 });
